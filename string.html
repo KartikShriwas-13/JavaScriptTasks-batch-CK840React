@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <h1>String</h1>
+    <script>
+        let str = "The Kiran Academy";
+        console.log("String: " + str);
+
+        console.log("Length of string: " + str.length);
+
+        console.log("First character: " + str[0]);
+        console.log("Last character: " + str[str.length - 1]);
+
+        console.log("Uppercase: " + str.toUpperCase());
+        console.log("Lowercase: " + str.toLowerCase());
+
+        console.log("Substring (0 to 5): " + str.substring(0, 5));
+        console.log("Slice (7 to 12): " + str.slice(7, 12));
+
+        let newStr = str.concat(" Pune");
+        console.log("After concat: " + newStr);
+
+        let newStr2 = newStr.replace("Pune", "Nagpur");
+        console.log("After replace: " + newStr2);
+
+        console.log("Character At index 4: " + str.charAt(4));
+
+        let trimmedStr = newStr.trim();
+        console.log("After trim: " + trimmedStr);
+    </script>
+</body>
+</html>

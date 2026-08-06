@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        console.log("Array: " + arr);
+
+        console.log("Length of array: " + arr.length);
+
+        console.log("First element: " + arr[0]);
+        console.log("Last element: " + arr[arr.length - 1]);
+
+        arr.push(6);
+        console.log("After push: " + arr);
+
+        arr.pop();
+        console.log("After pop: " + arr);
+
+        arr.unshift(0);
+        console.log("After unshift: " + arr);
+
+        arr.shift();
+        console.log("After shift: " + arr);
+
+        let index = arr.indexOf(3);
+        console.log("Index of 3: " + index);
+
+        let slicedArr = arr.slice(1, 4);
+        console.log("Sliced array (1 to 4): " + slicedArr);
+
+        let splicedArr = arr.splice(2, 2);
+        console.log("Spliced array (from index 2, remove 2 elements): " + splicedArr);
+        console.log("Array after splice: " + arr);
+    </script>
+</body>
+</html>
