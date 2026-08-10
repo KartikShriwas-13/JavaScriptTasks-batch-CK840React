@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banking ATM PIN Verification</title>
+</head>
+<body>
+
+    <h1>Question 1 — Banking ATM PIN Verification</h1>
+
+    <script>
+        let correctPin = "1234";
+        let attempts = 0;
+   
+
+        while (attempts < 3) {
+            let pin = prompt("Enter your 4-digit PIN:");
+
+            attempts++;
+
+            if (pin === correctPin) {
+                document.write("<h2>Successful login</h2>");
+                success = true;
+                break;
+            } else {
+                alert("Incorrect PIN. Attempts left: " + (3 - attempts));
+                if(attempts === 3) {
+                    document.write("<h2>Account temporarily blocked</h2>");
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

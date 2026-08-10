@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Shopping Cart</title>
+</head>
+<body>
+
+    <h1>Question 3 — Online Shopping Cart</h1>
+
+    <script>
+        let total = 0;
+        let count = 0;
+
+        while (true) {
+            let price = parseFloat(prompt("Enter item price (0 to finish):"));
+
+            if (price === 0) {
+                break;
+            }
+
+            if (price > 0) {
+                total = total + price;
+                count = count + 1;
+            } else {
+                alert("Price must be positive!");
+            }
+        }
+
+        document.write("<h2>Total Bill: ₹" + total + "</h2>");
+        document.write("<h2>Number of Products: " + count + "</h2>");
+    </script>
+
+</body>
+</html>

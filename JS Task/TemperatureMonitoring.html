@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banking ATM PIN Verification</title>
+</head>
+<body>
+
+    <h1>Question 2 — Hospital Temperature Monitoring</h1>
+
+    <script>
+        let arr = [];
+        let hr = 0
+        let temp = prompt("Enter the temperature of the patient at hour " + hr + " (Enter -1 to stop):");
+        while (temp != -1) {
+            arr[hr] = temp;
+            hr++;
+            temp = prompt("Enter the temperature of the patient at hour " + hr + " (Enter -1 to stop):");
+        }
+        document.write("<h2>Temperature readings:</h2>");
+        for (let i = 0; i < arr.length; i++) {
+            document.write("<p>Hour " + i + ": " + arr[i] + "°C</p>");
+        }
+        let averageTemp = arr.reduce((a, b) => parseFloat(a) + parseFloat(b), 0) / arr.length;
+        document.write("<h2>Average temperature: " + averageTemp.toFixed(2));
+    </script>
+
+</body>
+</html>
