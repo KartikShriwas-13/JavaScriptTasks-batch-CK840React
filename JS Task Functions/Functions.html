@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Functions</h1>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        let sum = 0;
+        console.log("Array -> "+arr);
+        arr.forEach(function(num) {
+            sum += num;
+        });
+        console.log("Sum of array elements: " + sum);
+
+        //Find square of each element in array using map
+        let squaredArr = arr.map(function(num) {
+            return num * num;
+        });
+        console.log("Squared array: " + squaredArr);
+
+        //prime number in array unsing filter
+        let arr2 = [2, 7, 4, 9, 5, 11, 15];
+        let filteredArr = arr2.filter((ele, index, array) => {
+            let isPrime = true;
+            if (ele < 2) {
+                isPrime = false;
+            } else {
+                for (let i = 2; i <= Math.sqrt(ele); i++) {
+                    if (ele % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+            return isPrime;
+        });
+        console.log("Filtered array: " + filteredArr);
+
+        //reduce method to find sum of array elements
+        let arr3 = [1, 2, 3, 4, 5];
+        let sum2 = arr3.reduce((accumulator, currentValue) => {
+            return accumulator + currentValue;
+        }, 0);
+        console.log("Sum using reduce: " + sum2);
+
+        //first match using find method
+        let target = 5;
+        let foundElement = arr3.find((ele) => {
+            return ele === target;
+        });
+        console.log("Found element: " + foundElement);  
+
+        //some method to check if any element is greater than 3
+        let isGreaterThanThree = arr3.some((ele) => {
+            return ele > 3;
+        });
+        console.log("element greater than 3: " + isGreaterThanThree);
+
+        //every method to check if all elements are even
+        let arr4 = [2, 4, 6, 8];
+        let isAllEven = arr4.every((ele) => {
+            return ele % 2 === 0;
+        });
+        console.log("All elements are even: " + isAllEven);
+
+        
+    </script>
+</body>
+</html>
